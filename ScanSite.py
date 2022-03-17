@@ -31,7 +31,7 @@ if (not os.environ.get('PYTHONHTTPSVERIFY', '') and getattr(ssl, '_create_unveri
 # from docx.font.highlight_color import WD_COLOR_INDEX 
 # import docx.shared.Length
 def open_list(listOfSpels):
-    f=open('listOfSpels.txt','r',encoding='utf-8')
+    f=open('listOfSpells.txt','r',encoding='utf-8')
     adding_flag=""
     list_of_keys=[]
     for i in range(1,21):
@@ -244,13 +244,13 @@ for element in options:
 f.close()
 
 
-# Открываем listOfSpels.txt в котором хранятся заклы, разделённые !!!
+# Открываем listOfSpells.txt в котором хранятся заклы, разделённые !!!
 try:
     # Открываем файл, записываем в оперативку все заклы
     listOfSpels=open_list(listOfSpels)
 except:
     print("No file")
-    f=open('listOfSpels.txt','w',encoding='utf-8')
+    f=open('listOfSpells.txt','w',encoding='utf-8')
     f.close()
 
 
@@ -407,7 +407,7 @@ if len(listOfSpels)!=kolOfSpels:
     except:
         pass
     # print(listOfSpels)
-    f = open('listOfSpels.txt','w',encoding='utf-8')
+    f = open('listOfSpells.txt','w',encoding='utf-8')
     for element in listOfSpels:
         for i in element:
             # print(str(i))
